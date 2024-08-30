@@ -46,13 +46,14 @@ main{
     flex-direction: column;
     width: 100%;
     gap: 25px;
+    
 }
 main a{
     background-image: linear-gradient(to bottom right, #18191a 0%, #0d294e 40%, #0d0d52 60%, #07073b 100%);
     padding: 15px 0;
     text-decoration: none;
     color: #fff;
-    border-radius: 3px;
+    border-radius:25px;
     box-shadow: 10px #979697;
     transition: all .5s ease-in-out;
 }
