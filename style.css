@@ -8,22 +8,22 @@
 }
 
 body {
+    background-image: url('./img/Q7pf.gif');
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover; /* Modifiquei para cobrir toda a tela */
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
-    background-image: linear-gradient(to bottom right, #18191a 0%, #0d294e 40%, #0d0d52 60%, #07073b 100%);
-    background-size: 200% 200%;
-    animation: float 6s linear infinite alternate;
+    margin: 0;
+    padding: 0 20px; /* Adicionei padding para telas menores */
 }
-@keyframes float {
-    from{background-position: 0 0;}
-    to{background-position: 100% 100%;}
-}
-section{
-    padding: 45px;
-    background-color: #fff;
-    width: 500px;
+section {
+    padding: 30px; /* Diminuído para se ajustar em telas menores */
+    background-color: #FFFFFF05;
+    width: 100%; /* Alterado para porcentagem */
+    max-width: 500px; /* Mantém um limite máximo */
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -33,55 +33,90 @@ section{
     text-align: center;
     box-shadow: 2px 15px 20px rgba(61,61,61,.4);
 }
-header img{
-    width: 160px;
-    border-radius: 15px;
+
+header img {
+    width: 150px; /* Ajuste da largura */
+    border-radius: 10px;
 }
-header h3{
-    color: rgb(6, 52, 108);
+
+header h3 {
+    color: rgb(160, 157, 157);
     font-size: 1.35rem;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 25px;
-    
+    gap: 15px;
 }
-main a{
-    background-image: linear-gradient(to bottom right, #18191a 0%, #0d294e 40%, #0d0d52 60%, #07073b 100%);
+
+main a {
+    background-image: linear-gradient(to bottom right, #b9b9b9 0%, #000000 40%, #000000 60%, #b9b9b9 100%);
     padding: 15px 0;
     text-decoration: none;
     color: #fff;
-    border-radius:25px;
+    border-radius: 25px;
     box-shadow: 10px #979697;
     transition: all .5s ease-in-out;
+    padding: 22px;
+    width: 100%; /* Ocupa todo o espaço disponível */
+    max-width: 400px; /* Limite para não ficar muito grande em telas grandes */
 }
-main a:hover{
-    opacity: .85;
+
+main a:hover {
+    opacity: .80;
 }
-.footer{
+
+.footer {
     position: absolute;
     bottom: 10px;
     color: #fff;
     font-size: 1rem;
 }
-@media (max-width: 520px){
-    section{
-        width: 90%;
-        padding: 30px;
+
+/* Responsividade - Ajustes para telas menores */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        max-width: 400px; /* Diminui a largura máxima */
     }
-    header img{
-        width: 100px;
+
+    header img {
+        width: 130px; /* Menor imagem em telas pequenas */
     }
-    header h3{
-        font-size: 1.3rem;
+
+    header h3 {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
     }
-    main{
-        gap: 15px;
+
+    main a {
+        max-width: 350px;
     }
-    main a{
-        padding: 10px 3;
-        box-shadow: 5px 5px #979697;
+}
+
+/* Ajustes para telas muito pequenas (ex: smartphones) */
+@media (max-width: 480px) {
+    section {
+        padding: 15px;
+        max-width: 100%; /* Ocupa toda a largura da tela */
+    }
+
+    header img {
+        width: 100px; /* Imagem menor ainda */
+    }
+
+    header h3 {
+        font-size: 1rem; /* Texto menor */
+    }
+
+    main a {
+        padding: 15px;
+        font-size: 0.9rem;
+        max-width: 300px;
+    }
+
+    .footer {
+        font-size: 0.9rem;
     }
 }
